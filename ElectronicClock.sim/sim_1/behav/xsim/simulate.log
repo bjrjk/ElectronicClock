@@ -1,0 +1,3 @@
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+$finish called at time : 102 ps : File "D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sim_1/new/frequencyDividerTest.v" Line 35

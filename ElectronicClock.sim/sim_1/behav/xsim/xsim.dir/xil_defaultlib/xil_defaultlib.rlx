@@ -1,0 +1,7 @@
+0.6
+2017.4
+Dec 15 2017
+21:07:18
+D:/Programming/FPGA/ElectronicClock/ElectronicClock.sim/sim_1/behav/xsim/glbl.v,1513215259,verilog,,,,glbl,,,,,,,,
+D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sim_1/new/frequencyDividerTest.v,1585055344,verilog,,,,frequencyDividerTest,,,,,,,,
+D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/frequencyDivider.v,1585054305,verilog,,D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sim_1/new/frequencyDividerTest.v,,frequencyDivider,,,,,,,,

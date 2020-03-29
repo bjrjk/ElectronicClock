@@ -1,0 +1,2 @@
+`define LED_NAN 5'b11111
+`define LED_ALARM 5'b11100
