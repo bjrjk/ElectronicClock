@@ -496,3 +496,504 @@ INFO: [Common 17-1381] The checkpoint 'D:/Programming/FPGA/ElectronicClock/Elect
 INFO: [runtcl-4] Executing : report_utilization -file main_utilization_synth.rpt -pb main_utilization_synth.pb
 report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 845.445 ; gain = 0.000
 INFO: [Common 17-206] Exiting Vivado at Sun Mar 29 11:10:34 2020...
+
+*** Running vivado
+    with args -log main.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source main.tcl
+
+
+****** Vivado v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source main.tcl -notrace
+Command: synth_design -top main -part xc7z020clg400-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 45048 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 389.820 ; gain = 99.383
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'main' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/main.v:3]
+INFO: [Synth 8-638] synthesizing module 'btnSigFilter' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/btnSigFilter.v:1]
+INFO: [Synth 8-638] synthesizing module 'frequencyDivider' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/frequencyDivider.v:1]
+	Parameter P bound to: 500000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'frequencyDivider' (1#1) [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/frequencyDivider.v:1]
+INFO: [Synth 8-256] done synthesizing module 'btnSigFilter' (2#1) [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/btnSigFilter.v:1]
+INFO: [Synth 8-638] synthesizing module 'multiLED' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/multiLED.v:1]
+INFO: [Synth 8-638] synthesizing module 'frequencyDivider__parameterized0' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/frequencyDivider.v:1]
+	Parameter P bound to: 50000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'frequencyDivider__parameterized0' (2#1) [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/frequencyDivider.v:1]
+INFO: [Synth 8-638] synthesizing module 'singleLED' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/singleLED.v:1]
+INFO: [Synth 8-256] done synthesizing module 'singleLED' (3#1) [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/singleLED.v:1]
+INFO: [Synth 8-256] done synthesizing module 'multiLED' (4#1) [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/multiLED.v:1]
+WARNING: [Synth 8-689] width (2) of port connection 'NumA' does not match port width (5) of module 'multiLED' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/main.v:41]
+INFO: [Synth 8-638] synthesizing module 'localTime' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/localTime.v:3]
+INFO: [Synth 8-256] done synthesizing module 'localTime' (5#1) [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/localTime.v:3]
+INFO: [Synth 8-638] synthesizing module 'timeViewer' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/timeViewer.v:3]
+INFO: [Synth 8-256] done synthesizing module 'timeViewer' (6#1) [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/timeViewer.v:3]
+WARNING: [Synth 8-689] width (6) of port connection 'hourIn' does not match port width (7) of module 'timeViewer' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/main.v:80]
+WARNING: [Synth 8-689] width (6) of port connection 'minuteIn' does not match port width (7) of module 'timeViewer' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/main.v:81]
+WARNING: [Synth 8-689] width (6) of port connection 'secondIn' does not match port width (7) of module 'timeViewer' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/main.v:82]
+WARNING: [Synth 8-689] width (5) of port connection 'hour1' does not match port width (6) of module 'timeViewer' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/main.v:83]
+WARNING: [Synth 8-689] width (5) of port connection 'hour2' does not match port width (6) of module 'timeViewer' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/main.v:84]
+WARNING: [Synth 8-689] width (5) of port connection 'minute1' does not match port width (6) of module 'timeViewer' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/main.v:85]
+WARNING: [Synth 8-689] width (5) of port connection 'minute2' does not match port width (6) of module 'timeViewer' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/main.v:86]
+WARNING: [Synth 8-689] width (5) of port connection 'second1' does not match port width (6) of module 'timeViewer' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/main.v:87]
+WARNING: [Synth 8-689] width (5) of port connection 'second2' does not match port width (6) of module 'timeViewer' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/main.v:88]
+INFO: [Synth 8-638] synthesizing module 'stopWatch' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/stopWatch.v:1]
+INFO: [Synth 8-256] done synthesizing module 'stopWatch' (7#1) [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/stopWatch.v:1]
+WARNING: [Synth 8-689] width (6) of port connection 'hourIn' does not match port width (7) of module 'timeViewer' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/main.v:106]
+WARNING: [Synth 8-689] width (6) of port connection 'minuteIn' does not match port width (7) of module 'timeViewer' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/main.v:107]
+WARNING: [Synth 8-689] width (6) of port connection 'secondIn' does not match port width (7) of module 'timeViewer' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/main.v:108]
+WARNING: [Synth 8-689] width (5) of port connection 'hour1' does not match port width (6) of module 'timeViewer' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/main.v:109]
+WARNING: [Synth 8-689] width (5) of port connection 'hour2' does not match port width (6) of module 'timeViewer' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/main.v:110]
+WARNING: [Synth 8-689] width (5) of port connection 'minute1' does not match port width (6) of module 'timeViewer' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/main.v:111]
+WARNING: [Synth 8-689] width (5) of port connection 'minute2' does not match port width (6) of module 'timeViewer' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/main.v:112]
+WARNING: [Synth 8-689] width (5) of port connection 'second1' does not match port width (6) of module 'timeViewer' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/main.v:113]
+WARNING: [Synth 8-689] width (5) of port connection 'second2' does not match port width (6) of module 'timeViewer' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/main.v:114]
+INFO: [Synth 8-638] synthesizing module 'timeSetter' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/timeSetter.v:1]
+INFO: [Synth 8-256] done synthesizing module 'timeSetter' (8#1) [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/timeSetter.v:1]
+WARNING: [Synth 8-689] width (6) of port connection 'hourIn' does not match port width (7) of module 'timeViewer' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/main.v:154]
+WARNING: [Synth 8-689] width (6) of port connection 'minuteIn' does not match port width (7) of module 'timeViewer' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/main.v:155]
+WARNING: [Synth 8-689] width (6) of port connection 'secondIn' does not match port width (7) of module 'timeViewer' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/main.v:156]
+WARNING: [Synth 8-689] width (5) of port connection 'hour1' does not match port width (6) of module 'timeViewer' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/main.v:157]
+WARNING: [Synth 8-689] width (5) of port connection 'hour2' does not match port width (6) of module 'timeViewer' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/main.v:158]
+WARNING: [Synth 8-689] width (5) of port connection 'minute1' does not match port width (6) of module 'timeViewer' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/main.v:159]
+WARNING: [Synth 8-689] width (5) of port connection 'minute2' does not match port width (6) of module 'timeViewer' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/main.v:160]
+WARNING: [Synth 8-689] width (5) of port connection 'second1' does not match port width (6) of module 'timeViewer' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/main.v:161]
+WARNING: [Synth 8-689] width (5) of port connection 'second2' does not match port width (6) of module 'timeViewer' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/main.v:162]
+WARNING: [Synth 8-689] width (6) of port connection 'hourIn' does not match port width (7) of module 'timeViewer' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/main.v:169]
+WARNING: [Synth 8-689] width (6) of port connection 'minuteIn' does not match port width (7) of module 'timeViewer' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/main.v:170]
+WARNING: [Synth 8-689] width (6) of port connection 'secondIn' does not match port width (7) of module 'timeViewer' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/main.v:171]
+WARNING: [Synth 8-689] width (5) of port connection 'hour1' does not match port width (6) of module 'timeViewer' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/main.v:172]
+WARNING: [Synth 8-689] width (5) of port connection 'hour2' does not match port width (6) of module 'timeViewer' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/main.v:173]
+WARNING: [Synth 8-689] width (5) of port connection 'minute1' does not match port width (6) of module 'timeViewer' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/main.v:174]
+WARNING: [Synth 8-689] width (5) of port connection 'minute2' does not match port width (6) of module 'timeViewer' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/main.v:175]
+WARNING: [Synth 8-689] width (5) of port connection 'second1' does not match port width (6) of module 'timeViewer' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/main.v:176]
+WARNING: [Synth 8-689] width (5) of port connection 'second2' does not match port width (6) of module 'timeViewer' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/main.v:177]
+INFO: [Synth 8-256] done synthesizing module 'main' (9#1) [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/main.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 441.801 ; gain = 151.363
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 441.801 ; gain = 151.363
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/constrs_1/new/port.xdc]
+Finished Parsing XDC File [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/constrs_1/new/port.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/constrs_1/new/port.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/main_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/main_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 810.020 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 810.020 ; gain = 519.582
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 810.020 ; gain = 519.582
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 810.020 ; gain = 519.582
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "clk_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "clk_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "AlarmLED" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "AlarmReg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-6014] Unused sequential element miliSecond_reg was removed.  [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/localTime.v:52]
+INFO: [Synth 8-5546] ROM "minute" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "second" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 810.020 ; gain = 519.582
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 8     
+	   2 Input      7 Bit       Adders := 4     
+	   2 Input      6 Bit       Adders := 7     
+	   2 Input      5 Bit       Adders := 20    
+	   2 Input      3 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
+	   2 Input      1 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 8     
+	                8 Bit    Registers := 1     
+	                7 Bit    Registers := 4     
+	                6 Bit    Registers := 12    
+	                5 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 21    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 8     
+	   2 Input      6 Bit        Muxes := 22    
+	   3 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 24    
+	   3 Input      4 Bit        Muxes := 8     
+	   2 Input      1 Bit        Muxes := 19    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module main 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
+Module frequencyDivider 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module btnSigFilter 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 3     
+Module frequencyDivider__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module multiLED 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+Module localTime 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 3     
++---Registers : 
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 6     
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      6 Bit        Muxes := 6     
+	   3 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module timeViewer 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 5     
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 6     
+	   3 Input      4 Bit        Muxes := 2     
+Module stopWatch 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 3     
++---Registers : 
+	                7 Bit    Registers := 3     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module timeSetter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 2     
+	   2 Input      1 Bit       Adders := 1     
++---Registers : 
+	                6 Bit    Registers := 3     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      6 Bit        Muxes := 8     
+	   2 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "insFrequencyDivider/cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "insFrequencyDivider/clk_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "insFrequencyDivider/cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "insFrequencyDivider/clk_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "AlarmReg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-6014] Unused sequential element miliSecond_reg was removed.  [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/localTime.v:52]
+INFO: [Synth 8-5545] ROM "insFrequencyDivider/cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "insFrequencyDivider/clk_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "second" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "minute" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "insFrequencyDivider/cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "insFrequencyDivider/clk_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "insFrequencyDivider/cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "insFrequencyDivider/clk_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "insBtnSigFilter1/insFrequencyDivider/cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "insBtnSigFilter1/insFrequencyDivider/clk_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "insBtnSigFilter2/insFrequencyDivider/cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "insBtnSigFilter2/insFrequencyDivider/clk_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "insBtnSigFilter3/insFrequencyDivider/cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "insBtnSigFilter3/insFrequencyDivider/clk_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-3886] merging instance 'insLocalTime/AlarmLED_reg[4]' (FDS) to 'insLocalTime/AlarmLED_reg[3]'
+INFO: [Synth 8-3886] merging instance 'insLocalTime/AlarmLED_reg[3]' (FDS) to 'insLocalTime/AlarmLED_reg[2]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (insLocalTime/\AlarmLED_reg[2] )
+INFO: [Synth 8-3886] merging instance 'insLocalTime/AlarmLED_reg[1]' (FDR) to 'insLocalTime/AlarmLED_reg[0]'
+WARNING: [Synth 8-3332] Sequential element (AlarmLED_reg[2]) is unused and will be removed from module localTime.
+WARNING: [Synth 8-3332] Sequential element (secondAlarm_reg[5]) is unused and will be removed from module localTime.
+WARNING: [Synth 8-3332] Sequential element (secondAlarm_reg[4]) is unused and will be removed from module localTime.
+WARNING: [Synth 8-3332] Sequential element (secondAlarm_reg[3]) is unused and will be removed from module localTime.
+WARNING: [Synth 8-3332] Sequential element (secondAlarm_reg[2]) is unused and will be removed from module localTime.
+WARNING: [Synth 8-3332] Sequential element (secondAlarm_reg[1]) is unused and will be removed from module localTime.
+WARNING: [Synth 8-3332] Sequential element (secondAlarm_reg[0]) is unused and will be removed from module localTime.
+WARNING: [Synth 8-3332] Sequential element (second_reg[5]) is unused and will be removed from module timeSetter.
+WARNING: [Synth 8-3332] Sequential element (second_reg[4]) is unused and will be removed from module timeSetter.
+WARNING: [Synth 8-3332] Sequential element (second_reg[3]) is unused and will be removed from module timeSetter.
+WARNING: [Synth 8-3332] Sequential element (second_reg[2]) is unused and will be removed from module timeSetter.
+WARNING: [Synth 8-3332] Sequential element (second_reg[1]) is unused and will be removed from module timeSetter.
+WARNING: [Synth 8-3332] Sequential element (second_reg[0]) is unused and will be removed from module timeSetter.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 810.020 ; gain = 519.582
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++------------+---------------------+---------------+----------------+
+|Module Name | RTL Object          | Depth x Width | Implemented As | 
++------------+---------------------+---------------+----------------+
+|singleLED   | LEDout              | 32x8          | LUT            | 
+|multiLED    | insSingleLED/LEDout | 32x8          | LUT            | 
++------------+---------------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 810.020 ; gain = 519.582
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 831.004 ; gain = 540.566
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-199] conflicting constants: propagated case_analysis 1 on pin 'insTimeViewer4LocalTimeChangei_1026/z' and propagated case_analysis 0 on pin 'insTimeViewer4LocalTimei_324/z' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/multiLED.v:33]
+WARNING: [Synth 8-199] conflicting constants: propagated case_analysis 1 on pin 'insTimeViewer4LocalTimeChangei_1025/z' and propagated case_analysis 0 on pin 'insTimeViewer4LocalTimei_323/z' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/multiLED.v:33]
+WARNING: [Synth 8-199] conflicting constants: propagated case_analysis 1 on pin 'insTimeViewer4LocalTimeChangei_1026/z' and propagated case_analysis 0 on pin 'insTimeViewer4LocalTimei_324/z' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/multiLED.v:33]
+WARNING: [Synth 8-199] conflicting constants: propagated case_analysis 1 on pin 'insTimeViewer4LocalTimeChangei_1025/z' and propagated case_analysis 0 on pin 'insTimeViewer4LocalTimei_323/z' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/multiLED.v:33]
+WARNING: [Synth 8-199] conflicting constants: propagated case_analysis 1 on pin 'insTimeViewer4LocalTimeChangei_1026/z' and propagated case_analysis 0 on pin 'insTimeViewer4LocalTimei_324/z' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/multiLED.v:33]
+WARNING: [Synth 8-199] conflicting constants: propagated case_analysis 1 on pin 'insTimeViewer4LocalTimeChangei_1025/z' and propagated case_analysis 0 on pin 'insTimeViewer4LocalTimei_323/z' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/multiLED.v:33]
+WARNING: [Synth 8-199] conflicting constants: propagated case_analysis 1 on pin 'insTimeViewer4LocalTimeChangei_1025/z' and propagated case_analysis 0 on pin 'insTimeViewer4LocalTimei_323/z' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/multiLED.v:33]
+WARNING: [Synth 8-199] conflicting constants: propagated case_analysis 1 on pin 'insTimeViewer4LocalTimeChangei_1026/z' and propagated case_analysis 0 on pin 'insTimeViewer4LocalTimei_324/z' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/multiLED.v:33]
+WARNING: [Synth 8-199] conflicting constants: propagated case_analysis 1 on pin 'insTimeViewer4LocalTimeChangei_1025/z' and propagated case_analysis 0 on pin 'insTimeViewer4LocalTimei_323/z' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/multiLED.v:33]
+WARNING: [Synth 8-199] conflicting constants: propagated case_analysis 1 on pin 'insTimeViewer4LocalTimeChangei_1026/z' and propagated case_analysis 0 on pin 'insTimeViewer4LocalTimei_324/z' [D:/Programming/FPGA/ElectronicClock/ElectronicClock.srcs/sources_1/new/multiLED.v:33]
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:40 ; elapsed = 00:00:41 . Memory (MB): peak = 836.711 ; gain = 546.273
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 836.711 ; gain = 546.273
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 836.711 ; gain = 546.273
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 836.711 ; gain = 546.273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 836.711 ; gain = 546.273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 836.711 ; gain = 546.273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 836.711 ; gain = 546.273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     2|
+|2     |CARRY4 |    64|
+|3     |LUT1   |     6|
+|4     |LUT2   |   152|
+|5     |LUT3   |    12|
+|6     |LUT4   |   120|
+|7     |LUT5   |   115|
+|8     |LUT6   |   121|
+|9     |MUXF7  |     2|
+|10    |FDRE   |   388|
+|11    |IBUF   |     4|
+|12    |OBUF   |    25|
++------+-------+------+
+
+Report Instance Areas: 
++------+--------------------------+---------------------------------+------+
+|      |Instance                  |Module                           |Cells |
++------+--------------------------+---------------------------------+------+
+|1     |top                       |                                 |  1011|
+|2     |  insBtnSigFilter1        |btnSigFilter                     |    56|
+|3     |    insFrequencyDivider   |frequencyDivider_8               |    52|
+|4     |  insBtnSigFilter2        |btnSigFilter_0                   |    58|
+|5     |    insFrequencyDivider   |frequencyDivider_7               |    52|
+|6     |  insBtnSigFilter3        |btnSigFilter_1                   |    77|
+|7     |    insFrequencyDivider   |frequencyDivider_6               |    52|
+|8     |  insLocalTime            |localTime                        |   201|
+|9     |    insFrequencyDivider   |frequencyDivider_5               |    53|
+|10    |  insMultiLED             |multiLED                         |   128|
+|11    |    insFrequencyDivider   |frequencyDivider__parameterized0 |    52|
+|12    |  insStopWatch            |stopWatch                        |   168|
+|13    |    insFrequencyDivider   |frequencyDivider_4               |    52|
+|14    |  insTimeSetter4Alarm     |timeSetter                       |   162|
+|15    |    insFrequencyDivider   |frequencyDivider_3               |    52|
+|16    |  insTimeSetter4LocalTime |timeSetter_2                     |   122|
+|17    |    insFrequencyDivider   |frequencyDivider                 |    52|
++------+--------------------------+---------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 836.711 ; gain = 546.273
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 25 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:35 . Memory (MB): peak = 836.711 ; gain = 178.055
+Synthesis Optimization Complete : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 836.711 ; gain = 546.273
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 70 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+63 Infos, 62 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:43 ; elapsed = 00:00:46 . Memory (MB): peak = 836.711 ; gain = 559.082
+INFO: [Common 17-1381] The checkpoint 'D:/Programming/FPGA/ElectronicClock/ElectronicClock.runs/synth_1/main.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file main_utilization_synth.rpt -pb main_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 836.711 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Apr 18 10:46:08 2020...

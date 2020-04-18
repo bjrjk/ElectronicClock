@@ -3,7 +3,8 @@
 module main(
     input clk,btn1,btn2,btn3,
     output [7:0] LED,LED2,
-    output [7:0] Select
+    output [7:0] Select,
+    output wire Alarmer
     );
 
     wire wBtn1,wBtn2,wBtn3;
@@ -68,7 +69,8 @@ module main(
     .hourAlarm(wAlarmHourOut),
     .minuteAlarm(wAlarmMinuteOut),
     .secondAlarm(wAlarmSecondOut),
-    .AlarmLED(wNumB)
+    .AlarmLED(wNumB),
+    .Alarmer(Alarmer)
     );
 
     timeViewer insTimeViewer4LocalTime( //View 1

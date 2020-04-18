@@ -6,11 +6,14 @@ module localTime(
     input [5:0] hourAlarmIn,minuteAlarmIn,secondAlarmIn,
     output reg[5:0] hour=6'd0,minute=6'd0,second=6'd0,
     output reg[5:0] hourAlarm=6'd0,minuteAlarm=6'd0,secondAlarm=6'd0,
-    output reg[4:0] AlarmLED=`LED_NAN
+    output reg[4:0] AlarmLED=`LED_NAN,
+    output wire Alarmer
     );
 
     reg[6:0] miliSecond=7'd0;
     wire clk_out;
+    reg AlarmReg=1'b0;
+    assign Alarmer=AlarmReg & clk_out;
 
     frequencyDivider #(
         .P ( 32'd500_000 ) //100Hz
@@ -27,9 +30,18 @@ module localTime(
             secondAlarm<=secondAlarmIn;
         end
         if(hourAlarm==hour&&minuteAlarm==minute) begin
-            if(second%2==0)AlarmLED<=`LED_ALARM;
-            else AlarmLED<=`LED_NAN;
-        end else AlarmLED<=`LED_NAN;
+            if(second%2==0) begin
+                AlarmLED<=`LED_ALARM;
+                AlarmReg<=1'b1;
+            end
+            else begin
+                AlarmLED<=`LED_NAN;
+                AlarmReg<=1'b0;
+            end
+        end else begin
+                AlarmLED<=`LED_NAN;
+                AlarmReg<=1'b0;
+        end
     end
 
     always@ (posedge clk_out) begin

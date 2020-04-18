@@ -59,3 +59,6 @@ set_property IOSTANDARD LVCMOS18 [get_ports btn2]
 set_property IOSTANDARD LVCMOS18 [get_ports btn3]
 
 create_clock -period 20.000 -name clk -waveform {0.000 10.000} [get_ports clk]
+
+set_property IOSTANDARD LVCMOS18 [get_ports Alarmer]
+set_property PACKAGE_PIN K14 [get_ports Alarmer]
