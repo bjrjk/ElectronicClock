@@ -115,7 +115,7 @@ module main(
     .second2(wNumH)
     );
 
-    wire wTimeSetterSetType;
+    wire[1:0] wTimeSetterSetType;
     timeSetter insTimeSetter4LocalTime( //Controller for View 2
     .clk(clk),
     .en(enView[1]),
@@ -131,7 +131,7 @@ module main(
     .secondOut(wTimeSetterSecond)
     );
 
-    wire wAlarmSetterSetType;
+    wire[1:0] wAlarmSetterSetType;
     timeSetter insTimeSetter4Alarm( //Controller for View 3
     .clk(clk),
     .en(enView[2]),
