@@ -2,10 +2,10 @@
 
 module localTime(
     input clk,rst,rstAlarm,
-    input [5:0] hourIn,minuteIn,secondIn,
-    input [5:0] hourAlarmIn,minuteAlarmIn,secondAlarmIn,
-    output reg[5:0] hour=6'd0,minute=6'd0,second=6'd0,
-    output reg[5:0] hourAlarm=6'd0,minuteAlarm=6'd0,secondAlarm=6'd0,
+    input [6:0] hourIn,minuteIn,secondIn,
+    input [6:0] hourAlarmIn,minuteAlarmIn,secondAlarmIn,
+    output reg[6:0] hour=6'd0,minute=6'd0,second=6'd0,
+    output reg[6:0] hourAlarm=6'd0,minuteAlarm=6'd0,secondAlarm=6'd0,
     output reg[4:0] AlarmLED=`LED_NAN,
     output wire Alarmer
     );
@@ -53,14 +53,14 @@ module localTime(
         end else begin
             if(miliSecond>=7'd99) begin
                 miliSecond<=7'd0;
-                if(second>=6'd59) begin
-                    second<=6'd0;
-                    if(minute>=6'd59) begin
-                        minute<=6'd0;
-                        if(hour>=5'd23) hour<=6'd0;
-                        else hour<=hour+6'd1;
-                    end else minute<=minute+6'd1;
-                end else second<=second+6'd1;
+                if(second>=7'd59) begin
+                    second<=7'd0;
+                    if(minute>=7'd59) begin
+                        minute<=7'd0;
+                        if(hour>=7'd23) hour<=7'd0;
+                        else hour<=hour+7'd1;
+                    end else minute<=minute+7'd1;
+                end else second<=second+7'd1;
             end else miliSecond<=miliSecond+7'd1;
         end
     end

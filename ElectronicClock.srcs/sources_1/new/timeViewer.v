@@ -3,7 +3,7 @@
 module timeViewer(
     input en,mode,modeSetType,
     input [6:0] hourIn,minuteIn,secondIn,
-    output reg[5:0] hour1,hour2,minute1,minute2,second1,second2
+    output reg[4:0] hour1,hour2,minute1,minute2,second1,second2
     );
 
     always@ (*) begin
@@ -31,12 +31,12 @@ module timeViewer(
                 second2=`LED_NAN;
             end
         end else begin
-            hour1=6'bzzzzzz;
-            hour2=6'bzzzzzz;
-            minute1=6'bzzzzzz;
-            minute2=6'bzzzzzz;
-            second1=6'bzzzzzz;
-            second2=6'bzzzzzz;
+            hour1=5'bzzzzz;
+            hour2=5'bzzzzz;
+            minute1=5'bzzzzz;
+            minute2=5'bzzzzz;
+            second1=5'bzzzzz;
+            second2=5'bzzzzz;
         end
     end 
 endmodule

@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="35" Path="D:/Programming/FPGA/ElectronicClock/ElectronicClock.xpr">
+<Project Version="7" Minor="35" Path="D:/Programming/Verilog/ElectronicClock/ElectronicClock.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="85b00517f5024d169911843d759a6a3e"/>

@@ -26,6 +26,7 @@ module main(
 
     reg[3:0] enView=4'b0001;
     reg[1:0] viewMode=2'b00;
+    
     always@ (negedge wBtn1) begin
         enView<={enView[2:0],enView[3]};
         viewMode<=viewMode+2'b01;
@@ -48,11 +49,11 @@ module main(
         .NumH(wNumH)
     );
 
-    wire [5:0] wLocalTimeHourOut,wLocalTimeMinuteOut,wLocalTimeSecondOut;
-    wire [5:0] wAlarmHourOut,wAlarmMinuteOut,wAlarmSecondOut;
+    wire [6:0] wLocalTimeHourOut,wLocalTimeMinuteOut,wLocalTimeSecondOut;
+    wire [6:0] wAlarmHourOut,wAlarmMinuteOut,wAlarmSecondOut;
     wire wLocalTimeRst,wLocalTimeRstAlarm;
-    wire [5:0] wTimeSetterHour,wTimeSetterMinute,wTimeSetterSecond;
-    wire [5:0] wAlarmSetterHour,wAlarmSetterMinute,wAlarmSetterSecond;
+    wire [6:0] wTimeSetterHour,wTimeSetterMinute,wTimeSetterSecond;
+    wire [6:0] wAlarmSetterHour,wAlarmSetterMinute,wAlarmSetterSecond;
     localTime insLocalTime( //Local Time Counter & Controller for View 1
     .clk(clk),
     .rst(wLocalTimeRst),
@@ -88,7 +89,7 @@ module main(
     .second2(wNumH)
     );
 
-    wire [5:0] wStopWatchMinute,wStopWatchSecond,wStopWatchMiliSecond;
+    wire [6:0] wStopWatchMinute,wStopWatchSecond,wStopWatchMiliSecond;
     stopWatch insStopWatch( //Controller for View 4
     .en(enView[3]),
     .clk(clk),

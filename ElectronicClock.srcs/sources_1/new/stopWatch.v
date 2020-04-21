@@ -1,6 +1,6 @@
 module stopWatch(
     input en,clk,btnSP,btnClr,
-    output reg[5:0] minuteOut,secondOut,miliSecondOut
+    output reg[6:0] minuteOut,secondOut,miliSecondOut
     );
 
     reg[6:0] minute=7'd0,second=7'd0,miliSecond=7'd0;
@@ -21,6 +21,7 @@ module stopWatch(
             second<=7'd0;
             miliSecond<=7'd0;
         end else begin
+            if(en && !btnSP)running<=~running;
             if(running) begin
                 if(miliSecond==7'd99) begin
                     miliSecond<=7'd0;
@@ -33,9 +34,6 @@ module stopWatch(
             end
         end
     end
-
-    always@ (posedge clk_out) //negedge btnSP
-        if(en && !btnSP)running<=~running;
 
     always@ (*) begin
         if(en) begin
